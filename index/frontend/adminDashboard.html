@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aushi Admin Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="flex h-screen">
+
+        <!-- Sidebar -->
+        <div class="w-64 bg-black text-white flex flex-col p-5">
+            <h2 class="text-2xl font-bold mb-8">Aushi Admin</h2>
+
+            <button onclick="showSection('dashboard')" class="mb-4 hover:text-yellow-400">Dashboard</button>
+            <button onclick="showSection('products')" class="mb-4 hover:text-yellow-400">Manage Products</button>
+            <button onclick="showSection('customers')" class="mb-4 hover:text-yellow-400">Customers</button>
+            <button onclick="showSection('approve')" class="mb-4 hover:text-yellow-400">Approve Admins</button>
+
+            <button onclick="logout()" class="mt-auto bg-red-600 px-3 py-2 rounded">Logout</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8 overflow-auto">
+
+            <!-- Dashboard Section -->
+            <div id="dashboard">
+                <h1 class="text-3xl font-bold mb-6">Dashboard Overview</h1>
+                <p>Welcome to Aushi Admin Panel.</p>
+            </div>
+
+            <!-- Products Section -->
+            <div id="products" class="hidden">
+                <h1 class="text-3xl font-bold mb-6">Manage Products</h1>
+
+                <!-- Add Product Form -->
+
+                <form id="productForm" class="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-6 mb-4 space-y-4">
+
+                    <input type="text" id="pname" placeholder="Product Name" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition" />
+
+                    <input type="number" id="pprice" placeholder="Price" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition" />
+
+                    <textarea id="pdesc" placeholder="Description" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg h-28 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"></textarea>
+
+                    <!-- Local Image Upload -->
+                    <input type="file" id="pimage" accept="image/*"
+                        class="w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 transition" />
+
+                    <!-- OR Image URL -->
+                    <input type="text" id="pimageUrl" placeholder="Paste Image URL (Google Drive / CDN)"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition" />
+
+                    <button type="submit"
+                        class="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 active:scale-95 transition duration-200">
+                        Add Product
+                    </button>
+
+                </form>
+
+                <!-- Product List -->
+                <div id="productList"></div>
+            </div>
+
+            <!-- Blogs Section -->
+            <div id="customers" class="hidden">
+                <h1 class="text-3xl font-bold mb-6">Customers</h1>
+                <!-- <button class="bg-blue-600 text-white px-4 py-2 rounded mb-4">Add Blog</button> -->
+                <div id="customerList"></div>
+            </div>
+
+            <!-- Approve Section -->
+            <div id="approve" class="hidden">
+                <h1 class="text-3xl font-bold mb-6">Approve Pending Admins</h1>
+                <div id="adminList"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+
+<script src="adminDashboard.js"></script>
+
+</html>

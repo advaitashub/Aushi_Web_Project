@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Aushi Sciences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 flex justify-center items-center min-h-screen p-4">
+
+    <div class="flex flex-col md:flex-row w-full max-w-6xl bg-white rounded-xl shadow-xl overflow-hidden">
+
+        <!-- Left Side: Company Info -->
+        <div
+            class="md:w-1/2 bg-gradient-to-br from-teal-600 to-blue-600 text-white p-8 flex flex-col justify-center gap-6">
+            <!-- Logo and Name -->
+            <div class="flex items-center gap-3 mb-6">
+                <img src="https://via.placeholder.com/60" alt="Aushi Sciences Logo"
+                    class="w-16 h-16 rounded-full border-2 border-white">
+                <h1 class="text-2xl font-bold">Aushi Sciences</h1>
+            </div>
+
+            <!-- Location -->
+            <div>
+                <h2 class="text-xl font-semibold mb-2">Our Location</h2>
+                <p class="text-sm flex items-start gap-2"><span>📍</span>H.O.: 44, Nahar paar, Subhash Nagar,
+                    Kashipur-USN-UK-244713 IN</p>
+                <p class="text-sm flex items-start gap-2"><span>🏭</span>Works: Dhanori Patti, Ram Nagar Road,
+                    Kashipur-USN-UK-244713 IN</p>
+            </div>
+
+            <!-- Business Hours -->
+            <div>
+                <h2 class="text-xl font-semibold mb-2">Business Hours</h2>
+                <p class="text-sm flex items-center gap-2"><span>⏰</span>Mon-Sat: 9:30am - 5:30pm</p>
+                <p class="text-sm flex items-center gap-2"><span>⛔</span>Sunday: Closed</p>
+            </div>
+
+            <!-- Email -->
+            <div>
+                <h2 class="text-xl font-semibold mb-2">Email Us</h2>
+                <p class="text-sm flex items-center gap-2"><span>✉️</span><a href="mailto:info@aushisciences.com"
+                        class="underline">info@aushisciences.com</a></p>
+                <p class="text-sm flex items-center gap-2"><span>💼</span><a href="mailto:msr@aushisciences.com"
+                        class="underline">msr@aushisciences.com</a></p>
+            </div>
+
+            <!-- Call / WhatsApp -->
+            <div>
+                <h2 class="text-xl font-semibold mb-2">Call / WhatsApp</h2>
+                <p class="text-sm flex items-center gap-2"><span>📞</span><a href="tel:+917302553567"
+                        class="underline">+91-7302553567</a> (Customer Care)</p>
+                <p class="text-sm flex items-center gap-2"><span>📞</span><a href="tel:+917622000243"
+                        class="underline">+91-7622000243</a> (Business)</p>
+                <p class="text-sm flex items-center gap-2"><span>💬</span><a href="https://wa.me/917622000243"
+                        class="underline">+91-7622000243</a> (WhatsApp)</p>
+            </div>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="md:w-1/2 p-8 flex flex-col">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Leave a Message</h2>
+            <form id="contactForm" class="flex flex-col gap-4">
+                <input type="text" id="name" placeholder="Name"
+                    class="bg-gray-100 text-gray-900 border-0 rounded-lg p-3 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-600 transition duration-300" />
+
+                <input type="email" id="email" placeholder="Email"
+                    class="bg-gray-100 text-gray-900 border-0 rounded-lg p-3 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-600 transition duration-300" />
+
+                <input type="text" id="subject" placeholder="Subject"
+                    class="bg-gray-100 text-gray-900 border-0 rounded-lg p-3 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-600 transition duration-300" />
+
+                <textarea name="message" id="message" placeholder="Message" rows="4"
+                    class="bg-gray-100 text-gray-900 border-0 rounded-lg p-3 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-600 transition duration-300"></textarea>
+
+                <input type="text" id="contactNo" placeholder="Contact No."
+                    class="bg-gray-100 text-gray-900 border-0 rounded-lg p-3 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-600 transition duration-300" />
+
+                <button type="submit" id="btn"
+                    class="bg-gradient-to-r from-teal-600 to-blue-600 text-white font-bold py-3 rounded-lg mt-4 hover:scale-105 hover:shadow-xl transition transform duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+<script src="customer.js"></script>
+</html>

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://wa.me/917622000243" target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 2.12.56 4.19 1.63 6.01L0 24l6.18-1.6A11.96 11.96 0 0 0 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm6.83 17.24c-.29.82-1.7 1.57-2.36 1.67-.61.09-1.38.13-2.23-.14-.52-.16-1.18-.38-2.04-.75-3.58-1.55-5.91-5.38-6.09-5.62-.18-.24-1.45-1.92-1.45-3.66 0-1.74.91-2.6 1.24-2.96.32-.36.7-.45.94-.45.23 0 .47.01.68.02.22.01.52-.08.81.6.29.68.98 2.36 1.07 2.53.09.18.15.38.03.61-.12.23-.18.38-.35.58-.17.2-.36.44-.51.59-.17.17-.34.35-.15.69.2.34.89 1.47 1.91 2.39 1.31 1.17 2.42 1.53 2.76 1.7.34.17.54.14.74-.09.2-.23.86-1 1.09-1.34.23-.34.47-.29.79-.17.32.12 2.03.96 2.38 1.14.35.18.58.27.66.42.09.15.09.86-.2 1.68z" />
+        </svg>
+    </a>
+
+    <div class="main-container min-h-screen bg-gradient-to-r  from-teal-50 via-teal-100 to-teal-200">
+        <header
+            class="fixed shadow z-50 root-container mt-0 py-3 flex justify-between top-0 items-center bg-teal-900 px-5 w-full"
+            id="main-container">
+            <div class="flex items-center gap-3">
+                <img src="/logo.png" alt="Logo" class="h-15 w-20 rounded-2xl">
+                <h1 class="text-white font-serif text-2xl lg:text-3xl  font-bold">Aushi Immunosciences</h1>
+            </div>
+
+            <div class="flex justify-end gap-2">
+                <div class="hidden md:flex items-center gap-2">
+                    <button data-target="home"
+                        class="scroll_button relative inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white hover:bg-[#F5F5F5] h-6 rounded-md px-3 group">
+                        <svg class="lucide lucide-arrow-left" stroke-linejoin="round" stroke-linecap="round"
+                            stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="22"
+                            width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m12 19-7-7 7-7"></path>
+                            <path d="M19 12H5"></path>
+                        </svg>
+                        <span class="origin-left scale-0 transition-transform group-hover:scale-100">Home</span>
+                    </button>
+                    <button data-target="products"
+                        class="scroll_button cursor-pointer bg-white relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F5F5F5] hover:text-[#06B6D4] h-6 px-3">
+                        <svg class="lucide lucide-rocket text-cyan-500 dark:text-cyan-400" stroke-linejoin="round"
+                            stroke-linecap="round" stroke-width="2" stroke="#06B6D4" fill="none" viewBox="0 0 24 24"
+                            height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                            </path>
+                            <path
+                                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                            </path>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                        </svg>
+                        Products
+                    </button>
+                    <button id="adminBtn"
+                        class="scroll_button cursor-pointer bg-white relative inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F5F5F5] hover:text-[#60A5FA] h-6 px-3">
+                        <svg class="lucide lucide-newspaper text-blue-400 dark:text-blue-600" stroke-linejoin="round"
+                            stroke-linecap="round" stroke-width="2" stroke="#60A5FA" fill="none" viewBox="0 0 24 24"
+                            height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                            </path>
+                            <path d="M18 14h-8"></path>
+                            <path d="M15 18h-5"></path>
+                            <path d="M10 6h8v4h-8V6Z"></path>
+                        </svg>
+                        Admin
+                    </button>
+                    <button data-target="aboutUs"
+                        class="scroll_button cursor-pointer bg-white relative inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F5F5F5] hover:text-[#FACC14] h-6 px-3">
+                        <svg class="lucide lucide-sticky-note text-yellow-400 dark:text-yellow-600"
+                            stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#FACC14" fill="none"
+                            viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V8.5L15.5 3Z"></path>
+                            <path d="M15 3v6h6"></path>
+                        </svg>
+                        About Us
+                    </button>
+                    <button data-target="reviews"
+                        class="scroll_button cursor-pointer bg-white relative inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F5F5F5] hover:text-[#FB923C] h-6 px-3">
+                        <svg class="lucide lucide-star text-orange-400 dark:text-orange-600" stroke-linejoin="round"
+                            stroke-linecap="round" stroke-width="2" stroke="#FB923C" fill="#FB923C" viewBox="0 0 24 24"
+                            height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        Reviews
+                    </button>
+                </div>
+            </div>
+            <button id="menuBtn" class="md:hidden absolute right-0 top-4 p-2 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- MOVE THIS OUTSIDE -->
+        <div id="mobileMenu" class="hidden fixed top-[70px] left-0 w-full bg-white shadow-lg p-4 space-y-3 z-40">
+            <a href="#home" class="block hover:text-green-600">Home</a>
+            <a href="#products" class="block hover:text-green-600">Products</a>
+            <a href="#aboutUs" class="block hover:text-green-600">About</a>
+            <a href="adminLogin.html" class="block hover:text-green-600">Admin</a>
+            <a href="#reviews" class="block hover:text-green-600">Reviews</a>
+        </div>
+
+
+        <section class="flex items-top justify-center h-[550px] bg-gray-900 ">
+            <div id="home"
+                class="relative w-[94%] md:w-[95%] lg:w-[97%] rounded-2xl overflow-hidden shadow-2xl h-[500px] lg:h-[538px]">
+                <!--HERO IMAGE-->
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60"
+                        alt="Hero Image" class="w-full h-full object-cover brightness-75 rounded-2xl pt-25" />
+                </a>
+                <!-- Overlay Content -->
+                <div class="absolute inset-0 flex flex-col justify-center items-start p-8 text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold z-10 mb-4 ">
+                        Discover the power of Aushi Products
+                    </h1>
+                    <p class="text-lh md:text-xl mb-6 text-gray-200 max-w-xl">
+                        Harnessing Nature for a Stronger You!
+                    </p>
+                    <button onclick="showSection('products')"
+                        class="px-3 py-2 md:px-6 md:py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-lg transitive-all duration-300">
+                        Explore Products
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section id="aboutUs" class="grid gap-4 lg:p-4 p-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center justify-center text-white h-[250px]">
+                    <h1 class="ml-2 lg:ml-20 text-3xl lg:text-5xl tracking-wide font-bold text-black lg:text-left">
+                        Natural Immunoscience To Improve Immunity
+                    </h1>
+                </div>
+
+                <div class=" grid grid-rows-2 p-2 lg:p-4 gap-8">
+                    <div>
+                        <p class="text-sm lg:text-base font-medium text-gray-800 leading-relaxed text-justify">
+                            🌿 <span class="font-semibold text-green-700">Our Motto</span><br>
+                            “Harnessing the Power of Nature to Keep You Healthy and Smiling.”<br>
+                            At <span class="font-semibold text-green-700">Aushi Sciences</span>, we believe nature holds
+                            every secret to wellness.
+                            Inspired by ancient traditions and guided by modern science, we create
+                            <span class="text-green-700">natural immunity boosters</span> from mushrooms and herbs.
+                            Trusted companions
+                            in your journey to better health.<br>
+                            From sourcing to production, every step at Aushi Sciences reflects transparency, care, and
+                            innovation — ensuring our products are
+                            <span class="italic text-green-600">smiles are effortless.safe, effective, and full of
+                                life.</span><br><br>
+                            We are India’s leading company manufacturing Immunity Boosters from mushrooms
+                            (e.g., Oyster, Enokitake, and Shiitake) & herbs, providing a wide range of
+                            products that help you stay healthy and smiling.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex flex-col items-top text-black">
+                            <h1 class="font-bold font-serif text-4xl lg:text-5xl leading-tight">
+                                Satisfied customers
+                            </h1>
+                            <span class="text-sm mt-1">Where nature's wisdom meets human potential</span>
+                        </div>
+                        <div class="flex flex-col justify-start text-black">
+                            <h1 class="font-bold font-serif text-4xl lg:text-5xl leading-tight">Our Roots</h1>
+                            <span class="text-sm mt-1">Where nature's wisdom meets human potential</span>
+                            <button
+                                class="px-1 py-2 mt-4 bg-white hover:bg-indigo-700 text-black font-semibold rounded-lg shadow-lg transition-all duration-300">
+                                Know About Us
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="w-full lg:-mt-40 rounded-2xl overflow-hidden shadow-2xl h-[300px]">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1549895058-8e633ba2f27f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974"
+                        alt="Hero Image" class="w-full h-full object-cover brightness-75 rounded-2xl" />
+                </a>
+            </div>
+        </section>
+
+
+        <!--TARGET FEATURE/OFFERS SECTION-->
+        <section class="p-4 min-h-screen grid grid-rows-[30%,70%] gap-4">
+            <!-- ROW 1: FULL WIDTH-->
+            <div class="rounded-xl overflow-hidden text-center p-4 h-[300px]">
+                <h3 class="text-xl font-bold">Wellness</h3>
+                <h1 class="text-5xl text-blue-950 font-bold">Targeted Healing <br> Through Mushroom Science</h1>
+                <p class="text-sm p-4 ">Scientifically formulated supplements designed to support your natural healing
+                    processes.</p>
+                <a href="/">
+                    <button
+                        class="rounded-xl bg-indigo-500 p-2 hover:bg-indigo-800 text-white font-semibold shadow-lg transition-all duration-300">Discover
+                        More</button>
+                </a>
+            </div>
+
+            <!-- ROW 2: TWO COLUMNS-->
+            <div class="grid md:grid-cols-2 gap-4">
+
+                <!--LEFT COLUMN-->
+                <div class="rounded-2xl overflow-hidden shadow-2xl bg-blue-200 p-4">
+                    <h2 class="text-2xl font-bold">LEFT COLUMN FOR IMAGES</h2>
+                </div>
+                <!-- Right column split into 3 rows -->
+                <div class="grid grid-rows gap-2 ">
+                    <div class="rounded overflow-hidden shadow-2xl bg-indigo-800 p-4">
+                        <h2 class="text-xl font-serif font-bold text-white">Quality Matters</h2>
+                        <p class=" text-white">
+                            We are <strong>ISO 9001:2015, ISO 22000:2005 </strong>, following GMP in manufacturing of
+                            products, leading
+                            Manufacturer of immunity boosting products and products required by the Mankind.
+                            Manufacturing facility is situated at Dev Bhoomi Uttrakhand’s pollution free environment</p>
+                    </div>
+                    <div class="rounded overflow-hidden shadow-2xl bg-indigo-800 p-4">
+                        <h2 class="text-xl font-serif font-bold  text-white">Smart Logistics</h2>
+                        <p class=" text-white">
+                            We have trained logistic personnel and courier services to reach products safely up to your
+                            door.
+                        </p>
+                    </div>
+                    <div class="rounded overflow-hidden shadow-2xl bg-indigo-800 p-4">
+                        <h2 class="text-xl font-serif font-bold  text-white">Free Delivery</h2>
+                        <p class=" text-white">
+                            We provide <strong> FREE</strong> delivery for the order more than INR 1000.00 and below INR
+                            1000.00 having
+                            nominal Charges.</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-indigo-800 p-4">
+                        <h2 class="text-xl font-serif font-bold text-white">Qualified Team</h2>
+                        <p class=" text-white"> We have team of qualified personnel from the sensitive Food and Pharma
+                            sectors, also having
+                            technical experts from various sectors for the innovation of new products to make mankind
+                            life better.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--CERTIFICATES-->
+        <section class="py-2 px-2 bg-gray-950 text-white">
+            <!-- Scrollable Slider -->
+            <div class="flex overflow-x-auto gap-4 pb-1 snap-x snap-mandatory cursor-grab hide-scrollbar">
+                <!-- Certificate Card 1 -->
+                <div
+                    class="flex flex-row items-center flex-shrink-0 w-85 h-20 rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-2">
+                    <img src="statics/iso-22000.png" alt="Certificate 1"
+                        class="w-[100px] h-full object-cover rounded-lg transition-transform duration-300 hover:scale-110">
+                    <div class="ml-4 P-1">
+                        <h1 class="text-4xl font-serif font-bold">ISO 22000</h1>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 2 -->
+                <div
+                    class="flex flex-row items-center flex-shrink-0 w-85 h-20 rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-2">
+                    <img src="statics/iso9000.png" alt="Certificate 1"
+                        class="w-[100px] h-full object-cover rounded-lg transition-transform duration-300 hover:scale-110">
+                    <div class="ml-4 P-1">
+                        <h1 class="text-4xl font-serif font-bold">ISO 9001</h1>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 3 -->
+                <div
+                    class="flex flex-row items-center flex-shrink-0 w-85 h-20 rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-2">
+                    <img src="statics/fssai.jpg" alt="Certificate 1"
+                        class="w-[100px] h-full object-cover rounded-lg transition-transform duration-300 hover:scale-110">
+                    <div class="ml-4 p-1">
+                        <h1 class="text-4xl font-serif font-bold">FSSAI</h1>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 4 -->
+                <div
+                    class="flex flex-row items-center flex-shrink-0 w-85 h-20 rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-2">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3..."
+                        alt="Certificate 1"
+                        class="w-[100px] h-full object-cover rounded-lg transition-transform duration-300 hover:scale-110">
+                    <div class="ml-4 P-1">
+                        <h1 class="text-4xl font-serif font-bold">ISO 22000</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-row items-center flex-shrink-0 w-85 h-20 rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-2">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3..."
+                        alt="Certificate 1"
+                        class="w-[100px] h-full object-cover rounded-lg transition-transform duration-300 hover:scale-110">
+                    <div class="ml-4 P-1">
+                        <h1 class="text-4xl font-serif font-bold">ISO 22000</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-6 px-4 text-white">
+            <!-- Section Header -->
+            <div class="text-center mb-6">
+                <h4 class="text-md font-bold text-gray-800">Wellness</h4>
+                <h1 class="text-4xl md:text-5xl text-blue-950 font-bold p-2">Healing for life</h1>
+                <p class="text-sm p-2 text-gray-800">Powerful natural supplements crafted from the world's most potent
+                    medicinal mushrooms</p>
+                <button
+                    class="mt-4 py-2 px-6 text-lg rounded-md bg-blue-800 hover:bg-green-800 font-semibold transition-all duration-300">
+                    View More
+                </button>
+            </div>
+
+            <!-- Scrollable Product Cards -->
+            <div id="products" class="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory cursor-grab hide-scrollbar">
+                <!-- <div id="mainProducts"></div>
+                
+                <div class="flex-shrink-0 w-60 snap-center rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-4">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=60"
+                        alt="Product 1" class="w-full h-60 object-cover rounded-lg">
+                    <div class="mt-2">
+                        <h2 class="text-lg font-bold truncate">Mushroom Supplement Extra Long Name</h2>
+                        <p class="text-sm text-gray-400 line-clamp-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, necessitatibus expedita
+                            sit quasi dicta quo ullam placeat eveniet obcaecati labore consequatur consectetur, in nobis
+                            molestiae distinctio, harum perferendis! Error, earum.
+                        </p>
+                        <p class="text-sm font-bold mt-1">$29.99</p>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 w-60 snap-center rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-4">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=60"
+                        alt="Product 1" class="w-full h-60 object-cover rounded-lg">
+                    <div class="mt-2">
+                        <h2 class="text-lg font-bold truncate">Mushroom Supplement Extra Long Name</h2>
+                        <p class="text-sm text-gray-300 line-clamp-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, necessitatibus expedita
+                            sit quasi dicta quo ullam placeat eveniet obcaecati labore consequatur consectetur, in nobis
+                            molestiae distinctio, harum perferendis! Error, earum.
+                        </p>
+                        <p class="text-sm font-bold mt-1">$29.99</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-60 snap-center rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-4">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=60"
+                        alt="Product 1" class="w-full h-60 object-cover rounded-lg">
+                    <div class="mt-2">
+                        <h2 class="text-lg font-bold truncate">Mushroom Supplement Extra Long Name</h2>
+                        <p class="text-sm text-gray-300 line-clamp-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, necessitatibus expedita
+                            sit quasi dicta quo ullam placeat eveniet obcaecati labore consequatur consectetur, in nobis
+                            molestiae distinctio, harum perferendis! Error, earum.
+                        </p>
+                        <p class="text-sm font-bold mt-1">$29.99</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-60 snap-center rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-4">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=60"
+                        alt="Product 1" class="w-full h-60 object-cover rounded-lg">
+                    <div class="mt-2">
+                        <h2 class="text-lg font-bold truncate">Mushroom Supplement Extra Long Name</h2>
+                        <p class="text-sm text-gray-300 line-clamp-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, necessitatibus expedita
+                            sit quasi dicta quo ullam placeat eveniet obcaecati labore consequatur consectetur, in nobis
+                            molestiae distinctio, harum perferendis! Error, earum.
+                        </p>
+                        <p class="text-sm font-bold mt-1">$29.99</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-60 snap-center rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-4">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=60"
+                        alt="Product 1" class="w-full h-60 object-cover rounded-lg">
+                    <div class="mt-2">
+                        <h2 class="text-lg font-bold truncate">Mushroom Supplement Extra Long Name</h2>
+                        <p class="text-sm text-gray-300 line-clamp-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, necessitatibus expedita
+                            sit quasi dicta quo ullam placeat eveniet obcaecati labore consequatur consectetur, in nobis
+                            molestiae distinctio, harum perferendis! Error, earum.
+                        </p>
+                        <p class="text-sm font-bold mt-1">$29.99</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-60 snap-center rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-4">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=60"
+                        alt="Product 1" class="w-full h-60 object-cover rounded-lg">
+                    <div class="mt-2">
+                        <h2 class="text-lg font-bold truncate">Mushroom Supplement Extra Long Name</h2>
+                        <p class="text-sm text-gray-300 line-clamp-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, necessitatibus expedita
+                            sit quasi dicta quo ullam placeat eveniet obcaecati labore consequatur consectetur, in nobis
+                            molestiae distinctio, harum perferendis! Error, earum.
+                        </p>
+                        <p class="text-sm font-bold mt-1">$29.99</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-60 snap-center rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-4">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=60"
+                        alt="Product 1" class="w-full h-60 object-cover rounded-lg">
+                    <div class="mt-2">
+                        <h2 class="text-lg font-bold truncate">Mushroom Supplement Extra Long Name</h2>
+                        <p class="text-sm text-gray-300 line-clamp-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, necessitatibus expedita
+                            sit quasi dicta quo ullam placeat eveniet obcaecati labore consequatur consectetur, in nobis
+                            molestiae distinctio, harum perferendis! Error, earum.
+                        </p>
+                        <p class="text-sm font-bold mt-1">$29.99</p>
+                    </div>
+                </div> -->
+            </div>
+            <a href="https://wa.me/917622000243?text=Hello%20Aushi%20Sciences!%20I%20am%20interested%20in%20your%20products.%20Could%20you%20please%20provide%20more%20information?"
+                style="display: block; text-align: center; padding: 10px 20px; background-color: #25D366; color: white; border-radius: 5px; text-decoration: none;">
+                Order on WhatsApp
+            </a>
+        </section>
+
+        <!--HOW WE MAKE IT-->
+
+        <section class="py-6 px-4 text-blue-950">
+            <!-- Section Header -->
+            <div class="text-left mb-6">
+                <h4 class="text-md font-bold text-gray-800">Blogs</h4>
+                <h1 class="text-4xl md:text-5xl font-bold p-2">Forest to healing </h1>
+                <p class="text-sm p-2 text-gray-800">Our journey transforms raw herbs potential into powerful
+                    wellness solutions.</p>
+            </div>
+
+            <div class="flex p-1 w-full max-w-full h-[600px] rounded-md overflow-hidden">
+                <!-- Card Item 1 -->
+                <div
+                    class="blog-card group relative flex flex-col overflow-hidden rounded-md border border-pink-500 bg-gray-900 cursor-pointer transition-all duration-500 flex-1 lg:hover:flex-[4]">
+                    <!-- Hidden content on hover -->
+                    <div
+                        class="blog-content absolute inset-0 flex flex-col justify-top items-top opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 bg-gray-800 bg-opacity-90 text-white p-2 z-10">
+                        <img src="statics/Tulsi.avif" alt="Extra Image"
+                            class="w-full h-[200px] rounded-lg mb-2 object-cover p-2 hidden lg:block">
+                        <p class="text-sm leading-relaxed text-justify"><span
+                                class="font-serif font-bold text-green-200">🌿 Holy
+                                Basil (Ocimum tenuiflorum) — Tulsi</span><br><br>
+
+                            Known as the “Queen of Herbs,” Holy Basil or Tulsi is highly valued in Ayurveda for its
+                            therapeutic and nutritional benefits. It contains essential nutrients like vitamin A, C,
+                            calcium, zinc, iron, and chlorophyll.
+                            <br>🌱 Key Benefits</span>
+                            <br>
+                            <span class="font-bold font-serif text-green-200">Reduces stress and anxiety:</span>
+                            Acts as an adaptogen — a natural substance that helps the body adapt to physical,
+                            emotional, and environmental stress.
+                            <br>
+                            <span class="font-bold font-serif text-green-200">Supports mental balance:</span>
+                            Studies show holy basil may have antidepressant and anti-anxiety effects comparable to
+                            certain medications.
+                            <br>
+                            <span class="font-bold font-serif text-green-200">Improves endurance and metabolism:</span>
+                            Research indicates it helps reduce fatigue, improve energy, and protect body tissues
+                            under stress.
+
+                            <span class="font-bold font-serif text-green-200">☕ How to Use</span>
+                            <br>
+                            Ayurvedic experts recommend drinking tulsi tea daily. It’s caffeine-free and promotes
+                            relaxation, mental clarity, and a sense of well-being.
+                            <br><br>Source:<a
+                                href="https://www.healthline.com/health/beauty-skin-care/benefits-of-tulsi-for-skin"><span
+                                    class=" text-blue-300 hover:text-teal-600 transition-colors"> Healthline</span>
+                            </a>
+
+                        </p>
+                    </div>
+
+                    <!-- Main rotated text -->
+                    <p class="flex justify-center items-center h-full w-full transition-transform duration-500 z-0">
+                        <span
+                            class="transform -rotate-90 group-hover:rotate-0 transition-transform duration-500 text-pink-500 uppercase tracking-wide text-center min-w-[14em]">TULSE(Basil)</span>
+                    </p>
+                </div>
+
+                <!-- Card Item 1 -->
+                <div
+                    class="blog-card group relative flex flex-col overflow-hidden rounded-md border border-pink-500 bg-gray-900 cursor-pointer transition-all duration-500 flex-1 lg:hover:flex-[4]">
+                    <!-- Hidden content on hover -->
+                    <div
+                        class="blog-content absolute inset-0 flex flex-col justify-top items-top opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 bg-gray-800 bg-opacity-90 text-white p-2 z-10">
+                        <img src="statics/Medi.avif" alt="Extra Image"
+                            class="w-full h-[200px] rounded-lg mb-2 p-2 object-cover hidden lg:block">
+                        <p class="text-sm text-justify leading-relaxed"><span
+                                class="font-bold font-serif text-green-200">🌿 Medicinal
+                                Plants for Mankind</span>
+                            <br><br>
+                            Medicinal plants like Aloe, Tulsi, Neem, Turmeric, and Ginger are widely known for curing
+                            common ailments and are often used as home remedies. In India and many parts of the world,
+                            herbs are valued not only for their healing properties but also for
+                            their cultural and spiritual significance.
+                            <br>
+                            With growing awareness of their therapeutic value, people have begun cultivating medicinal
+                            plants in their home gardens.Common medicinal and nutritional herbs include ginger, green
+                            tea, walnuts, aloe, pepper, and
+                            turmeric.Beyond medicine, herbs are also used in food, perfumes, dyes, pest control, and
+                            tea.Today, medicinal herbs play a vital role in pharmaceutical manufacturing. Traditional
+                            medicine
+                            practitioners effectively use herbal recipes to treat conditions such as diarrhea,
+                            constipation, hypertension, menstrual disorders, and fevers...
+                            <br><br>
+                            Source: <a
+                                href="https://www.nhp.gov.in/introduction-and-importance-of-medicinal-plants-and-herbs_mtl"><span
+                                    class=" text-blue-300 hover:text-teal-600 transition-colors"> National Health
+                                    Portal, Government of India</span></a>
+                        </p>
+                    </div>
+
+                    <!-- Main rotated text -->
+                    <p class="flex justify-center items-center h-full w-full transition-transform duration-500 z-0">
+                        <span
+                            class="transform -rotate-90 group-hover:rotate-0 transition-transform duration-500 text-pink-500 uppercase tracking-wide text-center min-w-[14em]">Medicinal
+                            Plants</span>
+                    </p>
+                </div>
+                <!-- Card Item 1 -->
+                <div id="blogs"
+                    class="blog-card group relative flex flex-col overflow-hidden rounded-md border border-pink-500 bg-gray-900 cursor-pointer transition-all duration-500 flex-1 lg:hover:flex-[4]">
+                    <!-- Hidden content on hover -->
+                    <div
+                        class="blog-content absolute inset-0 flex flex-col justify-top items-top opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 bg-gray-800 bg-opacity-90 text-white p-2 z-10">
+                        <img src="statics/Third.avif" alt="Extra Image"
+                            class="w-full h-[200px] rounded-lg mb-2 p-2 object-cover hidden lg:block">
+                        <h2 class="text-sm font-serif font-bold text-green-200">Power of Nutraceuticals in Modern
+                            Wellness</h2><br>
+                        <p class="text-white text-sm leading-relaxed">
+                            Nutraceuticals bridge the gap between <strong>nutrition and medicine</strong>, offering
+                            natural ways to promote wellness and prevent disease.
+                            Derived from food sources, they contain <strong>bioactive compounds</strong> that support
+                            overall health and help reduce the risk of chronic conditions.
+                        </p>
+                        <p class="text-white text-sm leading-relaxed mt-2">
+                            Key nutraceutical ingredients like <em>omega-3 fatty acids, probiotics, vitamins, minerals,
+                                and plant extracts</em> enhance
+                            <strong>immunity, gut health, and energy levels</strong>. Unlike synthetic medicines,
+                            nutraceuticals focus on <strong>long-term balance and preventive care</strong>.
+                        </p>
+                        <p class="text-white text-sm leading-relaxed mt-2">
+                            As global awareness grows, more people are turning to nutraceuticals for <strong>daily
+                                nutrition, stress relief, and anti-aging support</strong>.
+                            Modern research continues to validate their potential in improving <strong>metabolism,
+                                cognition, and immunity</strong>.
+                        </p><br>
+                        <p class="text-sm text-white mt-2">
+                            Source: <a href="https://www.ncbi.nlm.nih.gov"
+                                class="text-blue-400 hover:text-teal-600">National Center for Biotechnology Information
+                                (NCBI)</a>
+                        </p>
+                    </div>
+
+                    <!-- Main rotated text -->
+                    <p class="flex justify-center items-center h-full w-full transition-transform duration-500 z-0">
+                        <span
+                            class="transform -rotate-90 group-hover:rotate-0 transition-transform duration-500 text-pink-500 uppercase tracking-wide text-center min-w-[14em]">Power
+                            of Nutraceuticals</span>
+                    </p>
+                </div>
+
+                <!-- Card Item 1 -->
+                <div
+                    class="blog-card group relative flex flex-col overflow-hidden rounded-md border border-pink-500 bg-gray-900 cursor-pointer transition-all duration-500 flex-1 lg:hover:flex-[4]">
+                    <!-- Hidden content on hover -->
+                    <div
+                        class="blog-content absolute inset-0 flex flex-col justify-top items-top opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gray-800 bg-opacity-90 text-white p-2 z-10">
+                        <img src="statics/Agriculture.avif" alt="Extra Image"
+                            class="w-full h-[200px] rounded-lg mb-2 p-2 object-cover">
+                        <p class="text-sm text-left leading-relaxed justify-center"><span
+                                class="text-green-200 font-bold font-serif">Scientifically
+                                Agriculture</span><br><br>Food is the most basic human need. The domestication and
+                            cultivation
+                            of plants and animals beginning more than 11,500 years ago were aimed at ensuring that this
+                            need was met, and then as now these activities also fit with the relentless human drive to
+                            understand and control Earth’s biosphere. Over the last century and a half, many of the
+                            world’s political leaders have recognized what India’s Jawaharlal Nehru did, that <strong>
+                                “most things except agriculture can wait.”</strong> Scientific methods have been applied
+                            widely, and the results have revolutionized agricultural production. Under the conditions of
+                            prescientific
+                            agriculture, in a good harvest year, six people can produce barely enough food for
+                            themselves and four others. Advanced technologies have made it possible for one
+                            farmer in
+                            the United States, for example, to produce food for more than 100 people.
+                            and spoilage; and augment net production by improved processing methods. <br><br>
+                            Source :<a href="https://www.britannica.com"
+                                class="text-blue-400 hover:text-teal-600">Britannica</a>
+
+                    </div>
+
+                    <!-- Main rotated text -->
+                    <p class="flex justify-center items-center h-full w-full transition-transform duration-500 z-0">
+                        <span
+                            class="transform -rotate-90 group-hover:rotate-0 transition-transform duration-500 text-pink-500 uppercase tracking-wide text-center min-w-[14em]">Scientifically
+                            Agriculture</span>
+                    </p>
+                </div>
+
+                <!-- Card Item 1 -->
+                <div
+                    class="blog-card group relative flex flex-col overflow-hidden rounded-md border border-pink-500 bg-gray-900 cursor-pointer transition-all duration-500 flex-1 lg:hover:flex-[4]">
+                    <!-- Hidden content on hover -->
+                    <div
+                        class="blog-content absolute inset-0 flex flex-col justify-top items-top opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gray-800 bg-opacity-90 text-white p-2 z-10">
+                        <img src="statics/lionsmane.avif" alt="Extra Image"
+                            class="w-full h-[250px] rounded-lg mb-2 p-2 object-cover">
+                        <p class="text-sm text-left justify-center leading-relaxed">
+                        <h3 class="text-green-200 font-bold font-serif mb-2">🍄 Lion's Mane (Hericium
+                            erinaceus)</h3>
+                        <p class="text-white leading-relaxed text-sm mb-2">
+                            Lion’s Mane is a medicinal mushroom known for its ability to enhance <strong>brain function
+                                and memory</strong>.
+                            It contains compounds that stimulate <strong>nerve growth factor (NGF)</strong>, supporting
+                            nerve health and cognitive function.
+                        </p>
+                        <p class="text-green-200 leading-relaxed mb-2">
+                            Key benefits include:
+                        </p>
+                        <ul class="list-disc list-inside text-white">
+                            <li>Improves focus, clarity, and mental performance</li>
+                            <li>Supports nerve regeneration and brain health</li>
+                            <li>May reduce mild symptoms of anxiety and depression</li>
+                        </ul>
+                        <p class="text-sm text-white mt-2">
+                            Source: <a href="https://www.ncbi.nlm.nih.gov"
+                                class="text-blue-400 hover:text-teal-600">NCBI</a>
+                        </p>
+                    </div>
+
+                    <!-- Main rotated text -->
+                    <p class="flex justify-center items-center h-full w-full transition-transform duration-500 z-0">
+                        <span
+                            class="transform -rotate-90 group-hover:rotate-0 transition-transform duration-500 text-pink-500 uppercase tracking-wide text-center min-w-[14em]">Lion's
+                            Mane</span>
+                    </p>
+                </div>
+
+                <!-- Card Item 1 -->
+                <div
+                    class="blog-card group relative flex flex-col overflow-hidden rounded-md border border-pink-500 bg-gray-900 cursor-pointer transition-all duration-500 flex-1 lg:hover:flex-[4]">
+                    <!-- Hidden content on hover -->
+                    <div
+                        class="blog-content absolute inset-0 flex flex-col justify-top items-top opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gray-800 bg-opacity-90 text-white p-2 z-10">
+                        <img src="statics/HerbalNut.avif" alt="Extra Image"
+                            class="w-full h-[200px] rounded-lg mb-2 p-2 object-cover">
+                        <p class="text-sm text-left leading-relaxed justify-center"><span
+                                class="text-green-200 font-bold font-serif">🌾Herbal Nutrients: Nature’s Gift for
+                                Everyday Health</span><br><br>
+
+                            Herbs and plants have long served as the foundation of traditional healing. Today, they form
+                            the core of the nutraceutical industry, offering potent benefits through natural extracts
+                            and phytochemicals.
+                            <br>
+                            Ingredients like Ashwagandha, Moringa, Turmeric, and Spirulina are known to enhance energy,
+                            focus, and immunity. These herbal nutrients provide antioxidants and anti-inflammatory
+                            properties that protect the body from oxidative stress and toxins.
+                            <br>
+                            Unlike conventional supplements, herbal nutraceuticals are gentle yet effective, supporting
+                            holistic health and vitality. They help maintain the delicate balance between mind, body,
+                            and nutrition, making them an integral part of modern wellness routines.
+                            <br><br>
+                            Source: <a href="https://www.journals.elsevier.com/journal-of-herbal-medicine"
+                                class="text-blue-400 hover:text-teal-600">Journal of Herbal Medicine</a>
+                        </p>
+                    </div>
+
+                    <!-- Main rotated text -->
+                    <p class="flex justify-center items-center h-full w-full transition-transform duration-500 z-0">
+                        <span
+                            class="transform -rotate-90 group-hover:rotate-0 transition-transform duration-500 text-pink-500 uppercase tracking-wide text-center min-w-[14em]">HERBAL
+                            NUTRIENTS</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!--CONTACT US-->
+        <section class="py-6 px-4 text-blue-950">
+            <!-- Section Header -->
+            <div class="text-center mb-6">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 p-2">Transform your health journey</h1>
+                <h1 class="text-4xl md:text-5xl font-bold p-2">Unlock your potential</h1>
+                <p class="text-sm p-2 text-gray-800">Experience the power of scientifically validated mushroom-based
+                    wellness solutions</p>
+
+
+                <button
+                    class="cursor-pointer relative bg-black py-2 rounded-full group max-w-full flex items-center justify-center hover:bg-blue-400 transition-all duration-[0.8s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)] shadow-[inset_1px_2px_5px_#00000080]"
+                    onclick="location.href='contactUs.html'">
+                    <div class="absolute flex px-1 py-0.5 justify-start items-center inset-0">
+                        <div
+                            class="w-[0%] group-hover:w-full transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)]">
+                        </div>
+                        <div
+                            class="rounded-full shrink-0 flex justify-center items-center shadow-[inset_1px_-1px_3px_0_black] h-full aspect-square bg-blue-400 transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)] group-hover:bg-black">
+                            <div
+                                class="size-[0.8rem] text-black group-hover:text-white group-hover:-rotate-45 transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="100%"
+                                    width="100%">
+                                    <path fill="currentColor"
+                                        d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="pl-[3.4rem] pr-[1.1rem] group-hover:pl-[1.1rem] group-hover:pr-[3.4rem] transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)] text-white">
+                        <span class="block group-hover:hidden transition-all duration-200">CONTACT US</span>
+                        <span class="hidden group-hover:block transition-all duration-200">NOW</span>
+                    </div>
+                </button>
+
+            </div>
+        </section>
+
+        <!--REAL STORIES-->
+        <section id="reviews" class="py-16 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Real Stories</h2>
+                <p class="text-gray-600 mb-12">Hear from people whose lives were transformed by our products.</p>
+
+                <div class="grid gap-8 md:grid-cols-3">
+                    <!-- Story Card 1 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User 1"
+                            class="w-20 h-20 rounded-full mb-4 object-cover border-2 border-teal-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Anita Sharma</h3>
+                        <p class="text-gray-600 text-sm text-center mb-2">“I have been using Aushi Sciences’ mushroom
+                            extracts for 3 months, and I feel more energetic and healthier than ever!”</p>
+                        <p class="text-teal-600 font-medium text-sm">Verified Customer</p>
+                    </div>
+
+                    <!-- Story Card 2 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 2"
+                            class="w-20 h-20 rounded-full mb-4 object-cover border-2 border-teal-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Rohan Verma</h3>
+                        <p class="text-gray-600 text-sm text-center mb-2">“Their products helped me improve my immunity
+                            and overall wellness. Highly recommended for anyone looking for natural supplements.”</p>
+                        <p class="text-teal-600 font-medium text-sm">Verified Customer</p>
+                    </div>
+
+                    <!-- Story Card 3 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User 3"
+                            class="w-20 h-20 rounded-full mb-4 object-cover border-2 border-teal-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Priya Nair</h3>
+                        <p class="text-gray-600 text-sm text-center mb-2">“I struggled with fatigue for years, but after
+                            using their natural wellness solutions, I feel revitalized and more focused every day.”</p>
+                        <p class="text-teal-600 font-medium text-sm">Verified Customer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--FOOTER-->
+        <footer class="bg-gray-900 text-white pt-12 pb-6">
+            <!-- Top Section: Company Info, Quick Links, Contact -->
+            <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+                <!-- COMPANY INFO -->
+                <div>
+                    <img src="images/logo.png" alt="Aushi Sciences Logo" class="w-32 mb-4">
+                    <h3 class="text-xl font-bold mb-2">AUSHI SCIENCES</h3>
+                    <p class="text-gray-400 text-sm">
+                        Transforming natural ingredients into trusted wellness solutions.
+                    </p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Products</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Real Stories</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT INFO -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <p class="text-gray-400 text-sm mb-2">📍 H.O.: 44, Nahar Paar, Subhash Nagar, Kashipur-USN-UK-244713
+                        IN</p>
+                    <p class="text-gray-400 text-sm mb-2">📍 Works: Dhanori Patti, Ram Nagar Road,
+                        Kashipur-USN-UK-244713 IN</p>
+                    <p class="text-gray-400 text-sm mb-2">📧 Customer Care: <a href="mailto:info@aushisciences.com"
+                            class="hover:text-teal-400">info@aushisciences.com</a></p>
+                    <p class="text-gray-400 text-sm mb-2">📧 Business: <a href="mailto:msr@aushisciences.com"
+                            class="hover:text-teal-400 ">msr@aushisciences.com</a></p>
+                    <p class="text-gray-400 text-sm mb-2">📞 Cust. Care: <a href="tel:+917302553567"
+                            class="hover:text-teal-400">+91-7302553567</a></p>
+                    <p class="text-gray-400 text-sm mb-2">📞 Business: <a href="tel:+917622000243"
+                            class="hover:text-teal-400">+91-7622000243</a></p>
+                </div>
+
+                <!-- NEWSLETTER -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Subscribe to our newsletter for updates on wellness solutions.
+                    </p>
+                    <form class="flex flex-col sm:flex-row gap-2">
+                        <input type="email" placeholder="Your email"
+                            class="p-2 rounded-md text-gray-900 flex-1 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                        <button type="submit"
+                            class="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-md transition-colors md:-ml-20">
+                            Subscribe
+                        </button>
+                    </form>
+
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-teal-400 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 10-11.7 9.9v-7h-3v-3h3v-2c0-3 1.8-4.7 4.6-4.7 1.3 0 2.6.2 2.6.2v3h-1.5c-1.5 0-2 .9-2 1.8v2.2h3.5l-.6 3h-2.9v7A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-teal-400 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36 9.22 9.22 0 0119.27 1.5a4.52 4.52 0 00-7.72 3.9A12.84 12.84 0 013 1.1a4.5 4.5 0 001.39 6.03 4.5 4.5 0 01-2-.55v.06a4.5 4.5 0 003.6 4.42 4.5 4.5 0 01-2 .08 4.5 4.5 0 004.21 3.13A9 9 0 012 19.54 12.77 12.77 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.36 8.36 0 0023 3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="mt-12 border-t border-gray-700 pt-4 text-center text-gray-500 text-sm">
+                &copy; 2025 Aushi Sciences. All rights reserved.
+            </div>
+        </footer>
+        <script src="Home.js"></script>
+
+</body>
+
+</html>
