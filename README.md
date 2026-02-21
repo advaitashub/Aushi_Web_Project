@@ -1,6 +1,6 @@
 # 🌿 Aushi – Modern Full Stack Product Website  
 
-Aushi is a full-stack eCommerce-style product website with an Admin Approval System, Product Management Dashboard, and Customer Contact Handling.
+Aushi_Web_project is a full-stack eCommerce-style product website with an Admin Approval System made specially for Aushi Immunosciences pvt. ltd., Product Management Dashboard, and Customer Contact Handling.
 
 This project demonstrates practical implementation of:
 
@@ -106,8 +106,8 @@ Aushi/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/Aushi.git
-cd Aushi
+git clone https://github.com/yourusername/Aushi_Web_Project.git
+cd Aushi_Web_Project
 ```
 
 ### 2️⃣ Install Backend Dependencies
@@ -162,7 +162,7 @@ http://localhost:5000
 
 ## 📌 Why This Project Matters
 
-Aushi is not just a static website.  
+Aushi_Web_Project is not just a static website.  
 It is a full-stack system with real admin workflow logic, secure authentication, and database-driven rendering — similar to real-world business websites.
 
 ---
