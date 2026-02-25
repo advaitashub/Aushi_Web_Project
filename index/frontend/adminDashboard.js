@@ -62,7 +62,7 @@
 
 
 async function loadCustomers() {
-    const res = await fetch("http://localhost:5000/api/customer");
+    const res = await fetch("https://aushi-web-project.onrender.com/api/customer");
     const customers = await res.json();
 
     const list = document.getElementById("customerList");
