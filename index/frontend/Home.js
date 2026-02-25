@@ -73,7 +73,7 @@ async function loadProducts() {
     const container = document.getElementById("products");
 
     try {
-        const res = await fetch("http://localhost:5000/api/products");
+        const res = await fetch("https://aushi-web-project.onrender.com/api/products");
         const products = await res.json();
 
         container.innerHTML = "";
@@ -83,7 +83,7 @@ async function loadProducts() {
             card.className = "flex-shrink-0 w-60 snap-center rounded-xl overflow-hidden shadow-2xl bg-gray-800 p-4";
 
             card.innerHTML = `
-                <img src="http://localhost:5000/${p.image}" class="w-full h-60 object-cover rounded-lg">
+                <img src="https://aushi-web-project.onrender.com/${p.image}" class="w-full h-60 object-cover rounded-lg">
                 <div class="mt-2">
                     <h2 class="text-lg font-bold truncate text-white">${p.name}</h2>
                     <p class="text-sm text-gray-300">

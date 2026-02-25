@@ -6,7 +6,7 @@ btn.addEventListener("click", async(e)=>{
     const email=document.getElementById("email").value;
     const password=document.getElementById("password").value;
 
-    const res= await fetch("http://localhost:5000/api/admin/login",{
+    const res= await fetch("https://aushi-web-project.onrender.com/api/admin/login",{
         method:"POST",
         headers:{
             "Content-type": "application/json"

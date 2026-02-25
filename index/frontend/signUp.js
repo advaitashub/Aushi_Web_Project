@@ -24,7 +24,7 @@ btn.addEventListener("click", async (e) => {
   }
 
   try {
-    const res = await fetch("http://localhost:5000/api/admin/register", {
+    const res = await fetch("https://aushi-web-project.onrender.com/api/admin/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

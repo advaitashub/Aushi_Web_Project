@@ -12,7 +12,7 @@
 
 
         async function loadAdmins() {
-            const res = await fetch("http://localhost:5000/api/admin");
+            const res = await fetch("https://aushi-web-project.onrender.com/api/admin");
             const admins = await res.json();
 
             const adminList = document.getElementById("adminList");
@@ -41,7 +41,7 @@
 
 
         async function approveAdmin(id) {
-            await fetch(`http://localhost:5000/api/admin/approve/${id}`, {
+            await fetch(`https://aushi-web-project.onrender.com/api/admin/approve/${id}`, {
                 method: "PUT"
             });
 
@@ -50,7 +50,7 @@
 
 
         async function rejectAdmin(id) {
-            await fetch(`http://localhost:5000/api/admin/reject/${id}`, {
+            await fetch(`https://aushi-web-project.onrender.com/api/admin/reject/${id}`, {
                 method: "DELETE"
             });
 
@@ -110,7 +110,7 @@ async function addProduct(e) {
         formData.append("imageUrl", imageUrl);
     }
 
-    const res = await fetch("http://localhost:5000/api/products", {
+    const res = await fetch("https://aushi-web-project.onrender.com/api/products", {
         method: "POST",
         body: formData
     });
@@ -123,7 +123,7 @@ async function addProduct(e) {
 
 
 async function loadProducts() {
-    const res = await fetch("http://localhost:5000/api/products");
+    const res = await fetch("https://aushi-web-project.onrender.com/api/products");
     const products = await res.json();
 
     const list = document.getElementById("productList");
@@ -148,7 +148,7 @@ async function loadProducts() {
 
 
 async function deleteProduct(id) {
-    await fetch(`http://localhost:5000/api/products/${id}`, {
+    await fetch(`https://aushi-web-project.onrender.com/api/products/${id}`, {
         method: "DELETE"
     });
 
